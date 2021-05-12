@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c)  2019. houbinbin Inc.
+  ~ data-factory All rights reserved.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>data-factory</artifactId>
+        <groupId>com.github.houbb</groupId>
+        <version>0.0.9-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>data-factory-core</artifactId>
+
+    <dependencies>
+        <!--============================== SELF ==============================-->
+        <dependency>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>data-factory-api</artifactId>
+        </dependency>
+
+        <!--============================== INTER ==============================-->
+        <dependency>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>heaven</artifactId>
+        </dependency>
+
+        <!--============================== OTHER ==============================-->
+        <dependency>
+            <groupId>com.google.auto.service</groupId>
+            <artifactId>auto-service</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.mifmif</groupId>
+            <artifactId>generex</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>gen-maven-plugin</artifactId>
+                <version>${plugin.gen.version}</version>
+                <configuration>
+                    <junitVersion>5</junitVersion>
+                    <isOverwriteWhenExists>false</isOverwriteWhenExists>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

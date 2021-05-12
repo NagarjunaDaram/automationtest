@@ -1,0 +1,5 @@
+package com.cdi.automation.service;
+
+public class CdiUtilService {
+
+}

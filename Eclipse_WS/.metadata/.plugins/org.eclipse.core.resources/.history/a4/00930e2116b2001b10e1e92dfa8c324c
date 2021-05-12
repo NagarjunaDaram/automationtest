@@ -1,0 +1,6 @@
+package com.cdi.automation.util;
+import io.restassured.
+
+public class RestModel {
+
+}

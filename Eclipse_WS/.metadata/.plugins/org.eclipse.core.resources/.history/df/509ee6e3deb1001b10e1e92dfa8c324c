@@ -1,0 +1,22 @@
+package com.cdi.automation.util;
+
+import java.io.FileReader;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class GetJsonNode{
+	private static Object readJsonSimpleDemo(String filename) throws Exception {
+		FileReader reader = new FileReader(filename);
+	    JSONParser jsonParser = new JSONParser();
+	    return jsonParser.parse(reader);
+
+	}
+}
+
+public static void main(String[] args) throws Exception {
+    JSONObject jsonObject = (JSONObject) readJsonSimpleDemo("example.json");
+    System.out.println(jsonObject);
+    System.out.println(jsonObject.get("age"));
+}
+    
